@@ -7,6 +7,7 @@ import {
   FormControl,
   Validators
 } from '@angular/forms';
+import { getMaxListeners } from 'process';
 //import { Book } from "../models/book"; 
 //https://ng-bootstrap.github.io/#/components/rating/api
 
@@ -19,8 +20,14 @@ export class UtilityService {
   private recommendation_type = new BehaviorSubject<any>('');
  // private books:Book[];
   private booktitles;
-  constructor(private http: HttpClient) { }
-  
+  private user;
+  constructor(private http: HttpClient) { 
+    this.user={
+      
+    }
+
+  }
+ 
   serviceWrapper (serviceURL, requestData, successHandler, post?){
     var responseSubject = new Subject<any>();
     this.display_loading.next(true);
@@ -53,11 +60,11 @@ export class UtilityService {
     return responseSubject;
   }
  
-fetchPopular(){
+  getUserdata(){
    
   // environment.API_URL
     return this.serviceWrapper(
-    environment.API_URL,
+    environment.API_URL+"user.json",
     "",
     (successData) => {      
           return {

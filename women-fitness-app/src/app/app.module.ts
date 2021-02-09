@@ -5,9 +5,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UtilityService } from './services/utility.service';
+import {HealthDataContainerComponent } from'./health-data-container/health-data-container.component';
+import {ProfileContainerComponent } from'./profile-container/profile-container.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProfileContainerComponent,
+    HealthDataContainerComponent
   ],
   imports: [
     BrowserModule,
