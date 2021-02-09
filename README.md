@@ -1,1 +1,1 @@
-# women-wit-hackathon
+# women-fitness-app
