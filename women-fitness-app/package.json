@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "buildProd" : "ng build --prod --base-href \"https://madhumantimazumder.github.io/women-wit-hackathon/women-fitness-app/ \""
+	
   },
   "private": true,
   "dependencies": {

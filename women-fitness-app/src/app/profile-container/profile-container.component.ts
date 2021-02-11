@@ -41,7 +41,9 @@ export class ProfileContainerComponent implements OnInit {
       this.edit=true;
       this.profileForm.enable();
   }
-  
+  saveGoal(){
+    
+  }
   getData(){
     this.utilityService.getUserdata().subscribe((data)=>{ 
       //this.profileForm.get('name').setValue(data.user.name);
